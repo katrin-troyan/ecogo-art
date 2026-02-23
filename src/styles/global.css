@@ -1,0 +1,96 @@
+/* ===== ECOGO ART — Global Styles ===== */
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap");
+
+/* ===== CSS VARIABLES ===== */
+:root {
+  /* Colors */
+  --color-bg-light: #e8f5f2; /* світлий м'ятний фон (hero) */
+  --color-bg-dark: #1a2e27; /* темно-зелений (секція карток) */
+  --color-bg-white: #ffffff;
+  --color-bg-footer: #1a2e27;
+
+  --color-accent: #c94f2c; /* теракотово-помаранчевий */
+  --color-accent-hover: #a83e1e;
+
+  --color-text-dark: #1a1a1a;
+  --color-text-light: #ffffff;
+  --color-text-muted: #555555;
+
+  --color-leaf: #4a7c59; /* зелений для іконок листочків */
+
+  /* Typography */
+  --font-display: "Playfair Display", serif;
+  --font-body: "DM Sans", sans-serif;
+
+  /* Spacing */
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 32px;
+  --spacing-lg: 64px;
+  --spacing-xl: 96px;
+
+  /* Border Radius */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-pill: 50px;
+
+  /* Transitions */
+  --transition: 0.3s ease;
+
+  /* Max Width */
+  --max-width: 1200px;
+}
+
+/* ===== RESET ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text-dark);
+  background-color: var(--color-bg-white);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: var(--font-body);
+}
+
+/* ===== UTILITY ===== */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.section {
+  padding: var(--spacing-lg) 0;
+}

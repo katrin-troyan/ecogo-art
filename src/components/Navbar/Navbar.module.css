@@ -1,0 +1,55 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 32px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--color-bg-light);
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--color-text-dark);
+}
+
+.logo span {
+  color: var(--color-accent);
+}
+
+.links {
+  display: flex;
+  gap: 32px;
+}
+
+.links a {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--color-text-dark);
+  transition: color var(--transition);
+}
+
+.links a:hover,
+.links a.active {
+  color: var(--color-accent);
+}
+
+.socials {
+  display: flex;
+  gap: 16px;
+  font-size: 20px;
+}
+
+.socials a {
+  color: var(--color-text-dark);
+  transition: color var(--transition);
+}
+
+.socials a:hover {
+  color: var(--color-accent);
+}
