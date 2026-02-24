@@ -1,35 +1,40 @@
 .footer {
   background-color: var(--color-bg-dark);
   color: var(--color-text-light);
-  padding: 48px 32px 24px;
+  padding: 50px 70px 20px;
 }
 
 .top {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 32px;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
 }
 
 .logo {
   font-family: var(--font-display);
-  font-size: 20px;
-  font-weight: 800;
+  font-size: 24px;
+  font-weight: 400;
   text-transform: uppercase;
-  margin-bottom: 6px;
+  margin-bottom: 10px;
 }
 
 .logo span {
+  font-weight: 700;
   color: var(--color-accent);
 }
 
 .brand p {
-  font-size: 13px;
-  color: rgba(255, 255, 255, 0.55);
+  font-size: 16px;
+  font-weight: 400;
+
   font-style: italic;
 }
-
+.linksContainer {
+  display: flex;
+  align-items: flex-start;
+  gap: 100px;
+}
 .links {
   display: flex;
   flex-direction: column;
@@ -38,7 +43,7 @@
 
 .links a {
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--color-text-light);
   transition: color var(--transition);
 }
 
@@ -48,23 +53,21 @@
 
 .socials {
   display: flex;
-  gap: 16px;
-  font-size: 22px;
+  align-items: center;
+  gap: 40px;
 }
 
-.socials a {
-  color: rgba(255, 255, 255, 0.75);
-  transition: color var(--transition);
+.icon {
+  width: 44px;
+  height: 44px;
+  color: var(--color-text-light);
 }
 
-.socials a:hover {
-  color: var(--color-accent);
+.icon:hover {
+  color: var(--color-accent-hover);
 }
 
 .bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 20px;
   text-align: center;
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.4);
+  font-size: 14px;
 }

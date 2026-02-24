@@ -1,45 +1,80 @@
 /* ===== ECOGO ART — Global Styles ===== */
 
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500&family=Montserrat:wght@400;500;600&display=swap");
 
 /* ===== CSS VARIABLES ===== */
 :root {
+  --container-max-width: 1440px;
+
   /* Colors */
-  --color-bg-light: #e8f5f2; /* світлий м'ятний фон (hero) */
-  --color-bg-dark: #1a2e27; /* темно-зелений (секція карток) */
+  --color-bg-dark: #0c2a28;
   --color-bg-white: #ffffff;
-  --color-bg-footer: #1a2e27;
 
-  --color-accent: #c94f2c; /* теракотово-помаранчевий */
-  --color-accent-hover: #a83e1e;
+  --color-accent: #cd5b43;
+  --color-accent-hover: #b1c44d;
 
-  --color-text-dark: #1a1a1a;
+  --color-text-dark: #0c2a28;
   --color-text-light: #ffffff;
-  --color-text-muted: #555555;
-
-  --color-leaf: #4a7c59; /* зелений для іконок листочків */
 
   /* Typography */
-  --font-display: "Playfair Display", serif;
-  --font-body: "DM Sans", sans-serif;
+  --font-display: "Unbounded", sans-serif;
+  --font-body: "Montserrat", sans-serif;
 
+  /* ===== TYPOGRAPHY STYLES ===== */
+  .headline-1 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 1;
+  }
+
+  .headline-2 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1;
+  }
+
+  .subtitle {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  .btn-text {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: 5%;
+  }
+
+  .body-1 {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  .body-2 {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+  }
   /* Spacing */
-  --spacing-xs: 8px;
-  --spacing-sm: 16px;
-  --spacing-md: 32px;
-  --spacing-lg: 64px;
-  --spacing-xl: 96px;
+  --spacing-xs: 10px;
+  --spacing-sm: 30px;
+  --spacing-md: 40px;
+  --spacing-lg: 50px;
+  --spacing-xl: 80px;
 
   /* Border Radius */
-  --radius-sm: 6px;
-  --radius-md: 12px;
-  --radius-pill: 50px;
+  --radius: 20px;
 
   /* Transitions */
   --transition: 0.3s ease;
-
-  /* Max Width */
-  --max-width: 1200px;
 }
 
 /* ===== RESET ===== */
@@ -81,16 +116,13 @@ button {
   cursor: pointer;
   border: none;
   background: none;
-  font-family: var(--font-body);
 }
 
 /* ===== UTILITY ===== */
 .container {
-  max-width: var(--max-width);
+  width: 100%;
+  max-width: var(--container-max-width);
   margin: 0 auto;
-  padding: 0 var(--spacing-md);
-}
-
-.section {
-  padding: var(--spacing-lg) 0;
+  padding: 0 70px;
+  box-sizing: border-box;
 }
