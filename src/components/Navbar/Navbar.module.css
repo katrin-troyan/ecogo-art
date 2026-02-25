@@ -3,8 +3,10 @@
   align-items: center;
   justify-content: space-between;
   padding: 23px 70px;
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 100;
   background-color: transparent;
 }

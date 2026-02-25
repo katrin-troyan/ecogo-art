@@ -1,6 +1,11 @@
-const Home = () => (
-  <div style={{ padding: "120px 32px", fontSize: "24px" }}>
-    🌿 Home — скоро буде (День 2)
-  </div>
-);
+import Hero from "../../components/Hero/Hero";
+
+const Home = () => {
+  return (
+    <>
+      <Hero />
+    </>
+  );
+};
+
 export default Home;

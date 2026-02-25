@@ -20,49 +20,6 @@
   --font-display: "Unbounded", sans-serif;
   --font-body: "Montserrat", sans-serif;
 
-  /* ===== TYPOGRAPHY STYLES ===== */
-  .headline-1 {
-    font-family: var(--font-display);
-    font-weight: 500;
-    font-size: 45px;
-    line-height: 1;
-  }
-
-  .headline-2 {
-    font-family: var(--font-display);
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 1;
-  }
-
-  .subtitle {
-    font-family: var(--font-display);
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.5;
-  }
-
-  .btn-text {
-    font-family: var(--font-display);
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 1;
-    letter-spacing: 5%;
-  }
-
-  .body-1 {
-    font-family: var(--font-body);
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 1.5;
-  }
-
-  .body-2 {
-    font-family: var(--font-body);
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.5;
-  }
   /* Spacing */
   --spacing-xs: 10px;
   --spacing-sm: 30px;
@@ -86,10 +43,16 @@
   padding: 0;
 }
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
 html {
   scroll-behavior: smooth;
 }
-
 body {
   font-family: var(--font-body);
   color: var(--color-text-dark);
@@ -97,7 +60,12 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
-
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
 img {
   max-width: 100%;
   display: block;

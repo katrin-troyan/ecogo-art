@@ -72,4 +72,7 @@
       </clipPath>
     </defs>
   </symbol>
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="Arrow up-right">
+    <path d="M9.33337 22.6666L22.6667 9.33331M22.6667 9.33331H9.33337M22.6667 9.33331V22.6666" stroke="#CD5B43" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+  </symbol>
 </svg>
