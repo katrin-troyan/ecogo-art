@@ -1,0 +1,49 @@
+.about {
+  background-color: var(--color-bg-white);
+  padding: 80px 0;
+}
+
+.inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 80px;
+}
+
+.description {
+  width: 610px;
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36px;
+  color: var(--color-text-dark);
+}
+
+.pillars {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pillarsList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pillarItem {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-family: var(--font-body);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30 px;
+  color: var(--color-text-dark);
+}
+
+.leafIcon {
+  width: 22px;
+  height: 24px;
+  flex-shrink: 0;
+  color: var(--color-accent-hover);
+}
