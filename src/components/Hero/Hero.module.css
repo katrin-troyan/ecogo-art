@@ -1,15 +1,14 @@
 .hero {
   position: relative;
   width: 100%;
-  min-height: 893px; 
+  min-height: 893px;
   background-color: #d6e8e8;
   background-image: url("/assets/images/Hero.jpg");
   background-repeat: no-repeat;
   background-position: right center;
-  background-size: cover; 
+  background-size: cover;
   overflow: hidden;
 }
-
 
 .wrapper {
   position: relative;
@@ -104,20 +103,4 @@
   width: 32px;
   height: 32px;
   transition: color 0.3s ease;
-}
-
-/* ===== QUOTE — центр секції ===== */
-.quote {
-  position: absolute;
-  z-index: 2;
-  /* По скріншоту цитата приблизно по центру по вертикалі, трохи праворуч */
-  top: 487px;
-  left: 664px;
-  transform: translateY(-50%);
-  font-family: var(--font-display);
-  font-size: clamp(18px, 2vw, 26px);
-  font-style: italic;
-  color: var(--color-text-dark);
-  text-align: center;
-  line-height: 1.4;
 }
