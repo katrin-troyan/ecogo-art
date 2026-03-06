@@ -49,20 +49,33 @@
   color: var(--color-text-light);
 }
 
-/* ===== RESPONSIVE ===== */
+/* ===== TABLET (2 колонки) ===== */
 @media (max-width: 1024px) {
+  .projects {
+    padding: 40px 40px;
+  }
+
   .grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
   }
 }
 
-@media (max-width: 600px) {
+/* ===== MOBILE (1 колонка) ===== */
+@media (max-width: 768px) {
   .projects {
-    padding: 60px 24px;
+    padding: 20px 16px;
   }
 
   .grid {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .card {
+    gap: 20px;
+    padding: 20px 10px;
   }
 }
