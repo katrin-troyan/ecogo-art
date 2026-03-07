@@ -10,8 +10,7 @@ const Hero = () => {
       <div className={styles.wrapper}>
         <div className={styles.content}>
           <h1 className={styles.title}>
-            ART THAT SPEAKS
-            <br />
+            ART THAT SPEAKS <br />
             FOR NATURE
           </h1>
           <p className={styles.subtitle}>
@@ -24,7 +23,11 @@ const Hero = () => {
             and art installations
           </p>
         </div>
-
+        <img
+          src="/assets/images/Foto_hero2.jpg"
+          alt="Art that speaks for nature"
+          className={styles.mobileImage}
+        />
         <div className={styles.buttons}>
           <Link to="/events" className={styles.btnOutline}>
             Events{" "}

@@ -104,3 +104,100 @@
   height: 32px;
   transition: color 0.3s ease;
 }
+.mobileImage {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    min-height: auto;
+    background-image: none;
+    background-color: #d6e8e8;
+    overflow: visible;
+  }
+
+  .wrapper {
+    padding: 20px 40px 50px;
+    gap: 0;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+  }
+
+  .title {
+    font-size: 38px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+
+  .mobileImage {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .btnOutline {
+    width: 260px;
+    font-size: 18px;
+  }
+
+  .btnFilled {
+    width: 360px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+    background-image: none;
+    background-color: #d6e8e8;
+  }
+
+  .wrapper {
+    padding: 20px 16px 50px;
+    gap: 0;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .title {
+    font-size: 24px;
+    letter-spacing: 0.48px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .subtitle br {
+    display: none;
+  }
+
+  .mobileImage {
+    margin: 0 0 20px;
+  }
+
+  .buttons {
+    gap: 30px;
+  }
+
+  .btnOutline,
+  .btnFilled {
+    width: 100%;
+    height: 58px;
+    font-size: 16px;
+    letter-spacing: 0.08px;
+    justify-content: space-between;
+    padding: 15px 50px;
+  }
+}
