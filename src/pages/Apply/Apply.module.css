@@ -4,38 +4,41 @@
   background-image: url("/assets/images/Foto_hero-2.jpg");
   background-repeat: no-repeat;
   background-position: top right;
-  background-size: 650px;
+  background-size: 52%;
 }
 
 .navbarWrap {
-  background-color: #edfbfc;
   position: relative;
+  background: transparent;
 }
 
 .main {
-  padding: 60px 0 80px;
+  padding: 50px 0;
 }
 
-/* ===== TOP GRID — 2 колонки ===== */
 .topGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  gap: 50px;
   align-items: start;
 }
 
-/* ===== ЛІВА КОЛОНКА ===== */
 .left {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 50px;
 }
-
+.heroImage {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
 .title {
   font-family: var(--font-display);
-  font-size: 40px;
-  font-weight: 700;
-  line-height: 1.2;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
   color: var(--color-text-dark);
   text-transform: uppercase;
 }
@@ -48,39 +51,41 @@
   font-family: var(--font-body);
   font-size: 16px;
   font-weight: 400;
-  line-height: 1.7;
+  line-height: 1.5;
   color: var(--color-text-dark);
 }
 
 .block {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 10px;
 }
 
 .blockTitle {
   font-family: var(--font-display);
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 600;
+  line-height: 1.5;
   color: var(--color-text-dark);
 }
 
 .blockDesc {
   font-family: var(--font-body);
   font-size: 16px;
+  line-height: 1.5;
   color: var(--color-text-dark);
 }
 
 .list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 }
 
 .listItem {
   display: flex;
-  align-items: flex-start;
-  gap: 14px;
+  align-items: center;
+  gap: 20px;
   font-family: var(--font-body);
   font-size: 16px;
   line-height: 1.5;
@@ -101,32 +106,34 @@
   color: var(--color-text-dark);
 }
 
-/* ===== ПРАВА КОЛОНКА ===== */
 .right {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  padding-top: 420px;
+  padding-top: 540px;
 }
 
 .heroImage {
   width: 100%;
   height: auto;
-
   object-fit: cover;
 }
 
-/* Ready block — десктоп (у правій колонці) */
 .readyBlock {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 30px;
+}
+.readyText {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .readyDesc {
   font-family: var(--font-body);
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.5;
   color: var(--color-text-dark);
 }
 
@@ -134,6 +141,7 @@
   font-family: var(--font-body);
   font-size: 16px;
   font-weight: 700;
+  line-height: 1.5;
   color: var(--color-text-dark);
 }
 
@@ -157,13 +165,15 @@
   background-color: var(--color-accent-hover);
 }
 
-/* Ready block мобілка — прихований на десктопі */
 .readyBlockMobile {
   display: none;
 }
 
-/* ===== TABLET ===== */
 @media (max-width: 1024px) {
+  .page {
+    background-size: 80%;
+    background-position: right -120px top 80px;
+  }
   .main {
     padding: 40px 0 60px;
   }
@@ -180,15 +190,16 @@
   .blockTitle {
     font-size: 18px;
   }
+  .right {
+    padding-top: 600px;
+  }
 }
 
-/* ===== MOBILE ===== */
 @media (max-width: 768px) {
   .main {
     padding: 32px 0 48px;
   }
 
-  /* Одна колонка */
   .topGrid {
     grid-template-columns: 1fr;
     gap: 0;
@@ -210,20 +221,16 @@
     font-size: 15px;
   }
 
-  /* Права колонка — фото одразу після intro */
   .right {
     gap: 0;
-    /* Переставляємо порядок: фото йде після intro у лівій колонці */
     order: -1;
     margin-bottom: 32px;
   }
 
-  /* Ховаємо ready block у правій колонці на мобілці */
   .readyBlock {
     display: none;
   }
 
-  /* Показуємо ready block під обома колонками */
   .readyBlockMobile {
     display: flex;
     flex-direction: column;
