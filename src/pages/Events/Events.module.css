@@ -1,0 +1,379 @@
+/* ===== PAGE ===== */
+.page {
+  min-height: 100vh;
+  background-color: var(--color-bg-white);
+}
+
+/* ===== HERO ===== */
+.hero {
+  background-color: #edfbfc;
+  background-image: url("/assets/images/Foto_hero-3.jpg");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: 50%;
+  min-height: 320px;
+  position: relative;
+}
+
+.heroContent {
+  padding: 40px 70px 60px;
+}
+
+.heroText {
+  max-width: 460px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.heroTitle {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--color-text-dark);
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.heroTitle span {
+  color: var(--color-accent);
+}
+
+.heroDesc {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-text-dark);
+}
+
+/* ===== SECTIONS ===== */
+.section {
+  background-color: var(--color-bg-dark);
+  padding: 50px 70px 60px;
+}
+
+.sectionLight {
+  background-color: var(--color-bg-white);
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.sectionTitle {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-text-light);
+  text-transform: uppercase;
+}
+
+.sectionTitleDark {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-text-dark);
+  text-transform: uppercase;
+}
+
+/* ===== SLIDER ===== */
+.slider {
+  position: relative;
+}
+
+.sliderTrack {
+  width: 100%;
+}
+
+/* Десктоп — 3 картки в ряд */
+.desktopGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Мобілка — прихована на десктопі */
+.mobileCard {
+  display: none;
+}
+
+/* Стрілки — на десктопі у sectionHeader, на мобілці окремо */
+.arrows {
+  display: flex;
+  gap: 8px;
+  position: absolute;
+  top: -68px;
+  right: 0;
+}
+
+.arrow {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-light);
+  transition: all var(--transition);
+}
+
+.sectionLight .arrow {
+  border-color: rgba(0, 0, 0, 0.25);
+  color: var(--color-text-dark);
+}
+
+.arrow:hover {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: white;
+}
+
+.arrowIcon {
+  width: 18px;
+  height: 18px;
+}
+
+/* ===== CARD ===== */
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background-color: transparent;
+}
+
+.cardImageWrap {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.cardImageWrap:hover .cardImage {
+  transform: scale(1.04);
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cardTitle {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--color-text-light);
+}
+
+.cardDark .cardTitle {
+  color: var(--color-text-light);
+}
+
+/* Картки у темній секції — білий текст */
+.cardDark .cardDate {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.cardDark .cardDesc {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Картки у світлій секції — темний текст */
+.card:not(.cardDark) .cardTitle {
+  color: var(--color-text-dark);
+}
+
+.card:not(.cardDark) .cardDate {
+  color: rgba(12, 42, 40, 0.6);
+}
+
+.card:not(.cardDark) .cardDesc {
+  color: rgba(12, 42, 40, 0.7);
+}
+
+.card:not(.cardDark) .btnOutline {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.card:not(.cardDark) .btnOutline:hover {
+  background-color: var(--color-accent);
+  color: white;
+}
+
+/* Стрілки у світлій секції */
+.sectionLight .arrows .arrow {
+  border-color: rgba(0, 0, 0, 0.25);
+  color: var(--color-text-dark);
+}
+
+.cardDate {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.cardDesc {
+  font-family: var(--font-body);
+  font-size: 13px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Кнопки картки */
+.btnOutline {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 48px;
+  border: 2px solid var(--color-accent);
+  border-radius: 12px;
+  color: var(--color-text-light);
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 400;
+  background: transparent;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.btnOutline:hover {
+  background-color: var(--color-accent);
+}
+
+.btnFilled {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 48px;
+  background-color: var(--color-accent);
+  border-radius: 12px;
+  color: var(--color-text-light);
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 400;
+  border: none;
+  cursor: pointer;
+  transition: background-color var(--transition);
+}
+
+.btnFilled:hover {
+  background-color: var(--color-accent-hover);
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 1024px) {
+  .heroContent {
+    padding: 40px 40px 60px;
+  }
+
+  .heroTitle {
+    font-size: 28px;
+  }
+
+  .section {
+    padding: 40px 40px 50px;
+  }
+
+  .desktopGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .sectionTitle,
+  .sectionTitleDark {
+    font-size: 22px;
+  }
+
+  .hero {
+    background-size: 55%;
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .hero {
+    background-image: none;
+    background-color: #edfbfc;
+  }
+
+  .heroContent {
+    padding: 24px 20px 40px;
+  }
+
+  .heroText {
+    max-width: 100%;
+  }
+
+  .heroTitle {
+    font-size: 24px;
+  }
+
+  .section {
+    padding: 32px 20px 40px;
+  }
+
+  .sectionTitle,
+  .sectionTitleDark {
+    font-size: 20px;
+  }
+
+  /* Ховаємо десктоп грід */
+  .desktopGrid {
+    display: none;
+  }
+
+  /* Показуємо мобільну картку */
+  .mobileCard {
+    display: block;
+  }
+
+  /* Стрілки — поруч з заголовком */
+  .arrows {
+    top: -56px;
+  }
+
+  .arrow {
+    width: 36px;
+    height: 36px;
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+
+  /* Картки у темній секції на мобілці */
+  .cardTitle {
+    font-size: 18px;
+  }
+
+  .cardDate {
+    font-size: 13px;
+  }
+
+  .cardDesc {
+    font-size: 14px;
+  }
+
+  .btnOutline,
+  .btnFilled {
+    height: 52px;
+    font-size: 16px;
+    border-radius: 16px;
+  }
+}
