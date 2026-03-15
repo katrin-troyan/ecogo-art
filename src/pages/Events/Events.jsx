@@ -89,24 +89,20 @@ const Slider = ({ items, dark = false }) => {
   const prev = () => setCurrent((c) => (c - 1 + total) % total);
   const next = () => setCurrent((c) => (c + 1) % total);
 
-  // Десктоп — показуємо всі 3, мобілка — по одній
   return (
     <div className={styles.slider}>
       <div className={styles.sliderTrack}>
-        {/* Десктоп — всі картки */}
         <div className={styles.desktopGrid}>
           {items.map((event) => (
             <EventCard key={event.id} event={event} dark={dark} />
           ))}
         </div>
 
-        {/* Мобілка — одна картка */}
         <div className={styles.mobileCard}>
           <EventCard event={items[current]} dark={dark} />
         </div>
       </div>
 
-      {/* Стрілки */}
       <div className={styles.arrows}>
         <button className={styles.arrow} onClick={prev} aria-label="Previous">
           <svg viewBox="0 0 24 24" fill="none" className={styles.arrowIcon}>
@@ -138,13 +134,12 @@ const Slider = ({ items, dark = false }) => {
 const Events = () => {
   return (
     <div className={styles.page}>
-      {/* ===== HERO ===== */}
       <div className={styles.hero}>
         <Navbar />
         <div className={styles.heroContent}>
           <div className={styles.heroText}>
             <h1 className={styles.heroTitle}>
-              <span>ECOGO ART</span> EVENTS
+              <span className={styles.heroTitleSpan}>ECOGO ART</span> EVENTS
             </h1>
             <p className={styles.heroDesc}>
               Exhibitions, contests, and events uniting art and ecology

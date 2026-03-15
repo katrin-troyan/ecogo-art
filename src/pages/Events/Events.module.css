@@ -1,29 +1,23 @@
-/* ===== PAGE ===== */
-.page {
-  min-height: 100vh;
-  background-color: var(--color-bg-white);
-}
-
-/* ===== HERO ===== */
 .hero {
-  background-color: #edfbfc;
+  background-color: #ede6d4;
   background-image: url("/assets/images/Foto_hero-3.jpg");
   background-repeat: no-repeat;
   background-position: right top;
   background-size: 50%;
   min-height: 320px;
+  height: 589px;
   position: relative;
 }
 
 .heroContent {
-  padding: 40px 70px 60px;
+  padding: 50px 70px;
 }
 
 .heroText {
-  max-width: 460px;
+  max-width: 546px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 30px;
 }
 
 .heroTitle {
@@ -32,17 +26,18 @@
   font-weight: 700;
   color: var(--color-text-dark);
   text-transform: uppercase;
-  line-height: 1.2;
+  line-height: 1.5;
+  letter-spacing: 2%;
 }
 
-.heroTitle span {
+.heroTitleSpan {
   color: var(--color-accent);
 }
 
 .heroDesc {
   font-family: var(--font-body);
-  font-size: 15px;
-  line-height: 1.6;
+  font-size: 20px;
+  line-height: 1.5;
   color: var(--color-text-dark);
 }
 
