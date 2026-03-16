@@ -156,7 +156,6 @@ const Events = () => {
         </div>
       </div>
 
-      {/* ===== CURRENT EVENTS ===== */}
       <section className={styles.section}>
         <div className={styles.sectionHeader}>
           <h2 className={styles.sectionTitle}>CURRENT EVENTS</h2>
