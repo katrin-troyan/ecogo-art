@@ -40,7 +40,7 @@ const upcomingProjects = [
     date: "May 2026",
     desc: "A field program for artists in Ukraine's nature reserves to create works from life",
     btn: "Details",
-    btnType: "outline",
+    btnType: "filled",
   },
   {
     id: 2,
@@ -49,16 +49,16 @@ const upcomingProjects = [
     date: "June 2026",
     desc: "A digital art contest supporting endangered bird species listed in the Red Data Book",
     btn: "Details",
-    btnType: "outline",
+    btnType: "filled",
   },
   {
     id: 3,
     image: "/assets/images/FotoProjects-3.jpg",
     title: 'Sculpture Park "Second Life"',
     date: "July 2026",
-    desc: "An exhibition of sculptures crafted from industrial waste and metal",
+    desc: "An exhibition of sculptures crafted from industrial waste and metal scrap in a city park",
     btn: "Details",
-    btnType: "outline",
+    btnType: "filled",
   },
 ];
 
