@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import styles from "./Events.module.css";
 
@@ -63,7 +62,7 @@ const upcomingProjects = [
 ];
 
 const EventCard = ({ event, dark = false }) => (
-  <div className={`${styles.card} ${dark ? styles.cardDark : ""}`}>
+  <li className={`${styles.card} ${dark ? styles.cardDark : ""}`}>
     <div className={styles.cardImageWrap}>
       <img src={event.image} alt={event.title} className={styles.cardImage} />
     </div>
@@ -79,61 +78,13 @@ const EventCard = ({ event, dark = false }) => (
         {event.btn}
       </button>
     </div>
-  </div>
+  </li>
 );
-
-const Slider = ({ items, dark = false }) => {
-  const [current, setCurrent] = useState(0);
-  const total = items.length;
-
-  const prev = () => setCurrent((c) => (c - 1 + total) % total);
-  const next = () => setCurrent((c) => (c + 1) % total);
-
-  return (
-    <div className={styles.slider}>
-      <div className={styles.sliderTrack}>
-        <div className={styles.desktopGrid}>
-          {items.map((event) => (
-            <EventCard key={event.id} event={event} dark={dark} />
-          ))}
-        </div>
-
-        <div className={styles.mobileCard}>
-          <EventCard event={items[current]} dark={dark} />
-        </div>
-      </div>
-
-      <div className={styles.arrows}>
-        <button className={styles.arrow} onClick={prev} aria-label="Previous">
-          <svg viewBox="0 0 24 24" fill="none" className={styles.arrowIcon}>
-            <path
-              d="M15 18l-6-6 6-6"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </button>
-        <button className={styles.arrow} onClick={next} aria-label="Next">
-          <svg viewBox="0 0 24 24" fill="none" className={styles.arrowIcon}>
-            <path
-              d="M9 18l6-6-6-6"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </button>
-      </div>
-    </div>
-  );
-};
 
 const Events = () => {
   return (
     <div className={styles.page}>
+      {/* HERO */}
       <div className={styles.hero}>
         <Navbar />
         <div className={styles.heroContent}>
@@ -156,19 +107,24 @@ const Events = () => {
         </div>
       </div>
 
+      {/* CURRENT EVENTS */}
       <section className={styles.section}>
-        <div className={styles.sectionHeader}>
-          <h2 className={styles.sectionTitle}>CURRENT EVENTS</h2>
-        </div>
-        <Slider items={currentEvents} dark={true} />
+        <h2 className={styles.sectionTitle}>CURRENT EVENTS</h2>
+        <ul className={styles.grid}>
+          {currentEvents.map((event) => (
+            <EventCard key={event.id} event={event} dark={true} />
+          ))}
+        </ul>
       </section>
 
-      {/* ===== UPCOMING PROJECTS ===== */}
+      {/* UPCOMING PROJECTS */}
       <section className={`${styles.section} ${styles.sectionLight}`}>
-        <div className={styles.sectionHeader}>
-          <h2 className={styles.sectionTitleDark}>UPCOMING PROJECTS</h2>
-        </div>
-        <Slider items={upcomingProjects} dark={false} />
+        <h2 className={styles.sectionTitleDark}>UPCOMING PROJECTS</h2>
+        <ul className={styles.grid}>
+          {upcomingProjects.map((event) => (
+            <EventCard key={event.id} event={event} dark={false} />
+          ))}
+        </ul>
       </section>
     </div>
   );

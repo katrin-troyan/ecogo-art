@@ -1,10 +1,15 @@
+.page {
+  min-height: 100vh;
+  background-color: var(--color-bg-white);
+}
+
+/* ===== HERO ===== */
 .hero {
   background-color: #ede6d4;
   background-image: url("/assets/images/Foto_hero-3.jpg");
   background-repeat: no-repeat;
   background-position: right top;
   background-size: 50%;
-  min-height: 320px;
   height: 589px;
   position: relative;
 }
@@ -27,7 +32,6 @@
   color: var(--color-text-dark);
   text-transform: uppercase;
   line-height: 1.5;
-  letter-spacing: 2%;
 }
 
 .heroTitleSpan {
@@ -41,6 +45,7 @@
   color: var(--color-text-dark);
 }
 
+/* ===== SECTIONS ===== */
 .section {
   background-color: var(--color-bg-dark);
   padding: 80px 70px;
@@ -50,19 +55,13 @@
   background-color: var(--color-bg-white);
 }
 
-.sectionHeader {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 30px;
-}
-
 .sectionTitle {
   font-family: var(--font-display);
   font-size: 32px;
   font-weight: 700;
   color: var(--color-text-light);
   text-transform: uppercase;
+  margin-bottom: 30px;
 }
 
 .sectionTitleDark {
@@ -71,69 +70,24 @@
   font-weight: 700;
   color: var(--color-text-dark);
   text-transform: uppercase;
+  margin-bottom: 30px;
 }
 
-.slider {
-  position: relative;
-}
-
-.sliderTrack {
-  width: 100%;
-}
-
-.desktopGrid {
+/* ===== GRID (ul) ===== */
+.grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.mobileCard {
-  display: none;
-}
-
-.arrows {
-  display: flex;
-  gap: 8px;
-  position: absolute;
-  top: -68px;
-  right: 0;
-}
-
-.arrow {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 1.5px solid rgba(255, 255, 255, 0.4);
-  background: transparent;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-text-light);
-  transition: all var(--transition);
-}
-
-.sectionLight .arrow {
-  border-color: rgba(0, 0, 0, 0.25);
-  color: var(--color-text-dark);
-}
-
-.arrow:hover {
-  background-color: var(--color-accent);
-  border-color: var(--color-accent);
-  color: white;
-}
-
-.arrowIcon {
-  width: 18px;
-  height: 18px;
-}
-
+/* ===== CARD (li) ===== */
 .card {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  background-color: transparent;
 }
 
 .cardImageWrap {
@@ -160,66 +114,47 @@
   gap: 8px;
 }
 
-.cardTitle {
-  font-family: var(--font-display);
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 30px;
-  color: var(--color-text-light);
-}
-
+/* Темні картки */
 .cardDark .cardTitle {
   color: var(--color-text-light);
 }
-
 .cardDark .cardDate {
   color: var(--color-text-light);
 }
-
 .cardDark .cardDesc {
   color: var(--color-text-light);
 }
 
+/* Світлі картки */
 .card:not(.cardDark) .cardTitle {
   color: var(--color-text-dark);
 }
-
 .card:not(.cardDark) .cardDate {
   color: rgba(12, 42, 40, 0.6);
 }
-
 .card:not(.cardDark) .cardDesc {
   color: rgba(12, 42, 40, 0.7);
 }
 
-.card:not(.cardDark) .btnOutline {
-  border-color: var(--color-accent);
-  color: var(--color-accent);
-}
-
-.card:not(.cardDark) .btnOutline:hover {
-  background-color: var(--color-accent);
-  color: var(--color-text-light);
-}
-
-.sectionLight .arrows .arrow {
-  border-color: rgba(0, 0, 0, 0.25);
-  color: var(--color-text-dark);
+.cardTitle {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 .cardDate {
   font-family: var(--font-body);
   font-size: 20px;
-  color: var(--color-text-light);
 }
 
 .cardDesc {
   font-family: var(--font-body);
   font-size: 16px;
   line-height: 1.5;
-  color: var(--color-text-light);
 }
 
+/* ===== BUTTONS ===== */
 .btnOutline {
   margin-top: 8px;
   display: flex;
@@ -233,15 +168,26 @@
   font-family: var(--font-display);
   font-size: 20px;
   font-weight: 400;
-  letter-spacing: 0.05em;
   background: var(--color-accent);
   cursor: pointer;
   transition: all var(--transition);
 }
 
 .btnOutline:hover {
-  border: 2px solid var(--color-accent-hover);
   background-color: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+}
+
+/* Світла кнопка outline */
+.card:not(.cardDark) .btnOutline {
+  color: var(--color-accent);
+  background: transparent;
+  border-color: var(--color-accent);
+}
+
+.card:not(.cardDark) .btnOutline:hover {
+  background-color: var(--color-accent);
+  color: white;
 }
 
 .btnFilled {
@@ -257,19 +203,24 @@
   font-family: var(--font-display);
   font-size: 20px;
   font-weight: 400;
-  letter-spacing: 0.05em;
   background: var(--color-accent);
   cursor: pointer;
   transition: all var(--transition);
 }
 
 .btnFilled:hover {
-  border: 2px solid var(--color-accent-hover);
   background-color: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
 }
 
 /* ===== TABLET ===== */
 @media (max-width: 1024px) {
+  .hero {
+    height: auto;
+    background-image: none;
+    background-color: #ede6d4;
+  }
+
   .heroContent {
     padding: 40px 40px 60px;
   }
@@ -278,37 +229,61 @@
     font-size: 28px;
   }
 
-  .section {
-    padding: 40px 40px 50px;
+  .heroDesc {
+    font-size: 17px;
   }
 
-  .desktopGrid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
+  .section {
+    padding: 50px 40px;
   }
 
   .sectionTitle,
   .sectionTitleDark {
-    font-size: 20px;
+    font-size: 24px;
   }
 
-  .hero {
-    background-image: none;
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .cardTitle {
+    font-size: 17px;
+  }
+
+  .cardDate,
+  .cardDesc {
+    font-size: 15px;
+  }
+
+  .btnOutline,
+  .btnFilled {
+    font-size: 16px;
+    height: 48px;
   }
 }
 
 /* ===== MOBILE ===== */
 @media (max-width: 768px) {
+  .hero {
+    height: auto;
+  }
+
   .heroContent {
     padding: 24px 20px 40px;
   }
 
   .heroText {
     max-width: 100%;
+    gap: 20px;
   }
 
   .heroTitle {
     font-size: 24px;
+  }
+
+  .heroDesc {
+    font-size: 15px;
   }
 
   .section {
@@ -318,34 +293,21 @@
   .sectionTitle,
   .sectionTitleDark {
     font-size: 20px;
+    margin-bottom: 20px;
   }
 
-  .desktopGrid {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .mobileCard {
-    display: none;
-  }
-
-  .arrows {
-    display: none;
-  }
-
-  .arrow {
-    width: 28px;
-    height: 28px;
-    border-color: rgba(255, 255, 255, 0.5);
+  /* Мобілка — 1 колонка */
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
   }
 
   .cardTitle {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .cardDate {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .cardDesc {
