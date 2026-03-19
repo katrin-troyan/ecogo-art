@@ -10,14 +10,15 @@ const Apply = () => {
 
       <main className={styles.main}>
         <div className={styles.topGrid}>
+          {/* ===== ЛІВА КОЛОНКА ===== */}
           <div className={styles.left}>
-            <div className={styles.heroImage}>
+            {/* Заголовок + intro + мобільне фото */}
+            <div className={styles.heroContent}>
               <h1 className={styles.title}>
                 BECOME A PART OF
                 <br />
                 <span>ECOGO ART</span>
               </h1>
-
               <p className={styles.intro}>
                 We believe that art has the power to change the world. If you
                 are an artist, sculptor, photographer, or any creative soul who
@@ -25,15 +26,17 @@ const Apply = () => {
                 protection — we invite you to join Ecogo Art projects! Together,
                 we will create something truly meaningful
               </p>
+              {/* Фото — видиме тільки на мобілці */}
               <img
                 src="/assets/images/Foto_hero-2.jpg"
                 alt="Ecogo Art"
                 className={styles.heroImgMobile}
               />
             </div>
+
+            {/* Who can apply */}
             <div className={styles.block}>
               <h2 className={styles.blockTitle}>Who can apply</h2>
-
               <ul className={styles.list}>
                 <li className={styles.listItem}>
                   <svg className={styles.leafIcon}>
@@ -41,21 +44,18 @@ const Apply = () => {
                   </svg>
                   <span>Painters and visual artists;</span>
                 </li>
-
                 <li className={styles.listItem}>
                   <svg className={styles.leafIcon}>
                     <use href="/assets/sprite.svg#file-icons_leaflet" />
                   </svg>
                   <span>Authors of art projects and installations;</span>
                 </li>
-
                 <li className={styles.listItem}>
                   <svg className={styles.leafIcon}>
                     <use href="/assets/sprite.svg#file-icons_leaflet" />
                   </svg>
                   <span>Creative initiatives and collectives;</span>
                 </li>
-
                 <li className={styles.listItem}>
                   <svg className={styles.leafIcon}>
                     <use href="/assets/sprite.svg#file-icons_leaflet" />
@@ -66,41 +66,37 @@ const Apply = () => {
                   </span>
                 </li>
               </ul>
-
               <p className={styles.note}>
                 We are open to various formats and fresh ideas
               </p>
             </div>
 
+            {/* What you can apply for */}
             <div className={styles.block}>
               <h2 className={styles.blockTitle}>What you can apply for</h2>
-
               <p className={styles.blockDesc}>
                 You can join Ecogo Art in the following areas:
               </p>
-
-              <ul className={styles.block}>
+              {/* Виправлено: було className={styles.block}, має бути styles.list */}
+              <ul className={styles.list}>
                 <li className={styles.listItem}>
                   <svg className={styles.leafIcon}>
                     <use href="/assets/sprite.svg#file-icons_leaflet" />
                   </svg>
                   <span>Participation in art exhibitions;</span>
                 </li>
-
                 <li className={styles.listItem}>
                   <svg className={styles.leafIcon}>
                     <use href="/assets/sprite.svg#file-icons_leaflet" />
                   </svg>
                   <span>Creation of ecological art installations;</span>
                 </li>
-
                 <li className={styles.listItem}>
                   <svg className={styles.leafIcon}>
                     <use href="/assets/sprite.svg#file-icons_leaflet" />
                   </svg>
                   <span>Engagement in art and eco-initiatives;</span>
                 </li>
-
                 <li className={styles.listItem}>
                   <svg className={styles.leafIcon}>
                     <use href="/assets/sprite.svg#file-icons_leaflet" />
@@ -113,13 +109,13 @@ const Apply = () => {
             </div>
           </div>
 
+          {/* ===== ПРАВА КОЛОНКА — десктоп/табл ===== */}
           <div className={styles.right}>
             <div className={styles.readyBlock}>
               <div className={styles.readyText}>
                 <h2 className={styles.blockTitle}>Ready to apply?</h2>
-
                 <p className={styles.readyDesc}>
-                  Don’t delay your participation in projects that change the
+                  Don't delay your participation in projects that change the
                   world for the better. Join the Ecogo Art community today!
                   <br />
                   <span className={styles.readyBold}>
@@ -139,9 +135,9 @@ const Apply = () => {
           </div>
         </div>
 
+        {/* ===== READY BLOCK — тільки мобілка ===== */}
         <div className={styles.readyBlockMobile}>
           <h2 className={styles.blockTitle}>Ready to apply?</h2>
-
           <p className={styles.readyDesc}>
             Don't delay your participation in projects that change the world for
             the better. Join the Ecogo Art community today!
@@ -150,7 +146,6 @@ const Apply = () => {
               Go to our Telegram bot and start your registration.
             </span>
           </p>
-
           <a
             href="https://t.me/"
             target="_blank"
